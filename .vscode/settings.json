@@ -1,0 +1,14 @@
+{
+    "python.defaultInterpreterPath": ".venv/bin/python", // 適用於 Linux/macOS
+    // 如果您主要在 Windows 環境下開發，可能需要使用以下路徑：
+    // "python.defaultInterpreterPath": ".venv/Scripts/python.exe",
+    
+    // 選擇語言伺服器。Pylance 是 Microsoft 推薦且功能最強大的選擇。
+    "python.languageServer": "Pylance",
+    
+    // 允許 Pylance 尋找並解析專案資料夾中的本地程式碼，
+    // 這對於您使用 -e 安裝的本地套件（如 submodule）尤其重要。
+    "python.analysis.extraPaths": [
+        "./mudino/external_lib/dinov3/" // 如無其他本地套件，請保留此路徑；僅在有額外本地套件時才需修改
+    ],
+}
