@@ -1,0 +1,3 @@
+[submodule "mudino/external_lib/dinov3"]
+	path = mudino/external_lib/dinov3
+	url = https://github.com/facebookresearch/dinov3.git
