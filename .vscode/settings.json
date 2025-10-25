@@ -9,6 +9,6 @@
     // 允許 Pylance 尋找並解析專案資料夾中的本地程式碼，
     // 這對於您使用 -e 安裝的本地套件（如 submodule）尤其重要。
     "python.analysis.extraPaths": [
-        "./mudino/external_lib/dinov3/" // 替換為您的本地套件路徑
+        "./mudino/external_lib/dinov3/" // 如無其他本地套件，請保留此路徑；僅在有額外本地套件時才需修改
     ],
 }
