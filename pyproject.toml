@@ -1,12 +1,39 @@
 [project]
-name = "mudino-multi-phase-fusion-dinov3"
+name = "dynodino-dynamic-info-fusion-dinov3"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "matplotlib>=3.10.7",
+    "nibabel>=5.3.2",
     "numpy>=2.2.6",
     "pillow>=12.0.0",
+    "requests>=2.32.5",
     "simpleitk>=2.5.2",
+    "tqdm>=4.67.1",
 ]
+
+[tool.ruff]
+# 設定行長度（例如：與 Black 預設的 88 相同）
+line-length = 120
+# 排除不需要檢查的檔案或目錄
+exclude = [
+    "venv"
+]
+# 設定目標 Python 版本 (Ruff 會根據此版本執行 pyupgrade 規則)
+target-version = "py313" 
+
+[tool.ruff.lint]
+# 選擇要啟用的規則前綴 (E=pycodestyle, F=Pyflakes, B=Bugbear, I=isort, UP=pyupgrade)
+select = ["A", "B", "C4", "E", "W", "F", "I", "UP", "N", "Q", "S", "TID"]
+# 忽略特定的規則代碼 (例如：不檢查 docstring 缺少)
+ignore = ["D104", "N806"]
+
+[tool.ruff.lint.isort]
+known-third-party = ["dinov3"]
+
+[tool.ruff.format]
+# 讓 Ruff 也作為 Formatter，取代 Black
+quote-style = "double" 
+indent-style = "space"
